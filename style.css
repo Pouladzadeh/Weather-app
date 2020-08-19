@@ -12,13 +12,23 @@ body {
   );
 }
 
-.container-fluid.section-one {
+.container-fluid.top {
   padding: 50px;
   height: 35vh;
 }
 
-.container-fluid.section-two {
+.container-fluid.down {
   height: 65vh;
+}
+
+#wheater-info {
+  position: absolute;
+  margin-top: 50px;
+  left: 15%;
+  right: 15%;
+  width: 70%;
+  font-weight: 600;
+  display: none;
 }
 
 h1 {
@@ -73,7 +83,7 @@ h1 {
   min-width: 100%;
 }
 
-.container-fluid.section-two {
+.container-fluid.down {
   z-index: 1;
 }
 
@@ -193,14 +203,4 @@ h1 {
   .btn {
     font-size: 0.9rem;
   }
-}
-
-#wheater-info {
-  position: absolute;
-  bottom: 0;
-  left: 15%;
-  right: 15%;
-  width: 70%;
-  font-weight: 600;
-  display: none;
 }

@@ -19,23 +19,6 @@ document.getElementById("city-input").addEventListener(
   false
 );
 
-function showError(error) {
-  switch (error.code) {
-    case error.PERMISSION_DENIED:
-      x.innerHTML = "User denied the request for Geolocation.";
-      break;
-    case error.POSITION_UNAVAILABLE:
-      x.innerHTML = "Location information is unavailable.";
-      break;
-    case error.TIMEOUT:
-      x.innerHTML = "The request to get user location timed out.";
-      break;
-    case error.UNKNOWN_ERROR:
-      x.innerHTML = "An unknown error occurred.";
-      break;
-  }
-}
-
 function getWheater(city) {
   $.getJSON(
     "https://api.openweathermap.org/data/2.5/weather?q=" +
@@ -67,6 +50,7 @@ function getWheater(city) {
     }
   );
 }
+// This module for animated background made by https://github.com/msoroka/javascript-weather-app
 
 function wheaterSet(city, country, wheater, temp, pressure, windSpeed) {
   console.log(wheater);
@@ -118,7 +102,6 @@ function wheaterSet(city, country, wheater, temp, pressure, windSpeed) {
         'id="myVideo"><source  src="videos/thunderstorm.mp4" type="video/mp4"></video>'
     );
   }
-  //    $(".container-fluid").css("background", "rgba(0, 0, 0, 0.4)");
   $("#city-info").html(city + " " + country);
   $("#wheat-info").html(wheater);
   $("#temp-info").html(temp + " &deg;C");
